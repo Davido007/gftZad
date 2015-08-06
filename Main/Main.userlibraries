@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="lib2" />
+  <library name="Maven: jstl:jstl:1.2">
+    <archive path="C:/Users/dplichta/.m2/repository/jstl/jstl/1.2/jstl-1.2.jar" />
+  </library>
+  <library name="Maven: junit:junit:3.8.1">
+    <archive path="C:/Users/dplichta/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar" />
+  </library>
+  <library name="lib" />
+  <library name="Maven: javax:javaee-api:6.0">
+    <archive path="C:/Users/dplichta/.m2/repository/javax/javaee-api/6.0/javaee-api-6.0.jar" />
+  </library>
+  <library name="Maven: mysql:mysql-connector-java:5.1.36">
+    <archive path="C:/Users/dplichta/.m2/repository/mysql/mysql-connector-java/5.1.36/mysql-connector-java-5.1.36.jar" />
+  </library>
+  <library name="lib1" />
+  <library name="Maven: org.springframework:spring-beans:4.0.5.RELEASE">
+    <archive path="C:/Users/dplichta/.m2/repository/org/springframework/spring-beans/4.0.5.RELEASE/spring-beans-4.0.5.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-core:4.0.5.RELEASE">
+    <archive path="C:/Users/dplichta/.m2/repository/org/springframework/spring-core/4.0.5.RELEASE/spring-core-4.0.5.RELEASE.jar" />
+  </library>
+  <library name="Maven: commons-logging:commons-logging:1.1.3">
+    <archive path="C:/Users/dplichta/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar" />
+  </library>
+  <library name="Maven: commons-collections:commons-collections:3.0">
+    <archive path="C:/Users/dplichta/.m2/repository/commons-collections/commons-collections/3.0/commons-collections-3.0.jar" />
+  </library>
+  <library name="AngularJS">
+    <archive path="C:/Users/dplichta/Downloads/angular.min.js" />
+  </library>
+  <library name="scala-sdk-2.11.6">
+    <archive path="C:/Users/dplichta/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar" />
+    <archive path="C:/Users/dplichta/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.6.jar" />
+  </library>
+  <library name="scala-sdk-2.11.61">
+    <archive path="C:/Users/dplichta/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar" />
+    <archive path="C:/Users/dplichta/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.6.jar" />
+  </library>
+</eclipse-userlibraries>
+

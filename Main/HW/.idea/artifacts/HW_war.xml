@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="HW:war">
+    <output-path>$USER_HOME$/Downloads/SnakeGame-master/Main/HW/target</output-path>
+    <root id="archive" name="HW.war">
+      <element id="artifact" artifact-name="HW:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="HW:war exploded">
+    <output-path>$USER_HOME$/Downloads/SnakeGame-master/Main/HW/target/HW</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="HW" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.36" />
+          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+          <element id="library" level="project" name="Maven: gft.parent:gft.business:1.0-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: gft.parent:gft.dataAccess:1.0-SNAPSHOT" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$USER_HOME$/Downloads/SnakeGame-master/Main/HW/target/HW/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="HW/web/Web" />
+    </root>
+  </artifact>
+</component>
