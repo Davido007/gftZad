@@ -4,10 +4,7 @@ package com.gft.repositories;
  * Created by dplichta on 2015-08-05.
  */
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,6 +46,65 @@ public class UserRepository {
         DatabaseAccess.closeConenction(connection);
 
         return users;
+    }
+
+    public UserServiceDTO getUserByFullName(String name, String surname) {
+        Connection connection = DatabaseAccess.getConnection();
+        UserServiceDTO userServiceDTO = null;
+
+        ResultSet sqlResult = null;
+        try {
+            String query = "SELECT ID, FirstName, Surname FROM user WHERE FirstName = ? AND Surname = ?";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, name);
+            statement.setString(2, surname);
+
+            sqlResult = statement.executeQuery();
+
+           /* UserEntityConverter userEntityConverter = new UserEntityConverter();
+            UserEntity user = new UserEntity();
+            if(sqlResult != null) {
+                user.setFirstName(sqlResult.getString("FirstName"));
+                user.setSurname(sqlResult.getString("Surname"));
+                user.setID(sqlResult.getInt("ID"));
+            }
+            userServiceDTO = userEntityConverter.convert(user);*/
+
+            while (sqlResult.next()) {
+                UserEntityConverter userEntityConverter = new UserEntityConverter();
+                UserEntity user = new UserEntity();
+                user.setFirstName(sqlResult.getString("FirstName"));
+                user.setSurname(sqlResult.getString("Surname"));
+                user.setID(sqlResult.getInt("ID"));
+                userServiceDTO = userEntityConverter.convert(user);
+            }
+
+            sqlResult.close();
+            statement.close();
+
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
+
+        DatabaseAccess.closeConenction(connection);
+        return userServiceDTO;
+    }
+
+    public void addUser(String name, String surname) {
+        Connection connection = DatabaseAccess.getConnection();
+        try {
+            String query = "INSERT INTO user (FirstName, Surname) VALUES (?,?);";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, name);
+            statement.setString(2, surname);
+            statement.executeUpdate();
+            statement.close();
+
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
+
+        DatabaseAccess.closeConenction(connection);
     }
 
 }

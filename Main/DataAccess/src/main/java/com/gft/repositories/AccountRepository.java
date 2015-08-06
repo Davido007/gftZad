@@ -53,4 +53,21 @@ public class AccountRepository {
         DatabaseAccess.closeConenction(connection);
         return accounts;
     }
+    public void addAccount(String number, Double balance, int UserId) {
+        Connection connection = DatabaseAccess.getConnection();
+        try {
+            String query = "INSERT INTO account (Number, Balance, UserId) VALUES (?,?,?);";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setString(1, number);
+            statement.setDouble(2, balance);
+            statement.setInt(3, UserId);
+            statement.executeUpdate();
+            statement.close();
+
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
+
+        DatabaseAccess.closeConenction(connection);
+    }
 }

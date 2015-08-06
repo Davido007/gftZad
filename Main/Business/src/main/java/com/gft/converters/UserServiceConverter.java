@@ -18,7 +18,9 @@ import java.util.List;
 public class UserServiceConverter {
     public UserDTO convert(UserServiceDTO userServiceDTO) {
         UserDTO userDTO = new UserDTO();
-        BeanUtils.copyProperties(userServiceDTO, userDTO);
+        if (userServiceDTO == null)
+            return null;
+            BeanUtils.copyProperties(userServiceDTO, userDTO);
         return userDTO;
     }
 
